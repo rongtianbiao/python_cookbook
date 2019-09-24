@@ -28,7 +28,7 @@ s = "sdfsfe//"
 print(s.strip("//"))
 
 
-# 5、字符串对其
+# 5、字符串对齐
 # a、ljust()、 rjust()、 center()
 text = "hello world"
 print(text.ljust(20))
@@ -78,5 +78,4 @@ print(textwrap.fill(s, 40))
 # textwrap 模块对于字符串打印是非常有用的，特别是当你希望输出自动匹配终端
 # 大小的时候。你可以使用 os.get_terminal_size().columns 方法来获取终端的大小尺寸
 
-# next: 数字日期和时间
 
