@@ -44,16 +44,44 @@ print(a + b)
 # 涉及到数组的重量级运算操作，可以使用 NumPy 库。 NumPy 的一个主要特征是它
 # 会给 Python 提供一个数组对象，相比标准的 Python 列表而已更适合用来做数学运算。
 
-import numpy as np
-ax = np.array([1, 2, 3, 4])
-ay = np.array([5, 6, 7, 8])
-print(ax * 2)
-print(ax + 10)
-print(ax + ay)
-print(type(ax))
-print(np.full((2, 3), 5))
+# import numpy as np
+# ax = np.array([1, 2, 3, 4])
+# ay = np.array([5, 6, 7, 8])
+# print(ax * 2)
+# print(ax + 10)
+# print(ax + ay)
+# print(type(ax))
+# print(np.full((2, 3), 5))
 
-# next: 3.10
+
+# 6、随机选择
+import random
+l = [1, 2, 3, 4, 5, 6]
+print(random.choice(l))  # 从一个序列中随机抽取一个元素
+print(random.sample(l, 3))   # 从序列中提取出n个元素组成新的序列
+random.shuffle(l)    # 打乱一个序列
+print(l)
+print(random.randint(0, 10))   # 生成随机整数
+print(random.random())   # 生成0-1之间的浮点数
+# 注：在 random 模块中的函数不应该用在和密码学相关的程序中。如果你确实需要类似
+# 的功能，可以使用 ssl 模块中相应的函数。比如， ssl.RAND_bytes() 可以用来生成一
+# 个安全的随机字节序列。
+
+# 7、基本的日期与时间转换
+# a 用timedelta表示一个时间段
+from datetime import timedelta
+a = timedelta(days=2, hours=6)
+b = timedelta(hours=4.5)
+c = a + b
+print(c.days, c.seconds, c.total_seconds())
+
+
+
+
+
+
+
+
 
 
 
